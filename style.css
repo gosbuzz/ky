@@ -1,0 +1,342 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:'Lora',sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+header{
+  height: 70px;
+}
+header h1 {
+   float: right;
+   padding: 12px 24px;
+   text-transform: uppercase;
+}
+header h1 a{
+  color: rgb(4, 4, 90);
+  transition: .3s;
+}
+header h1 a:hover{
+  color: red;
+}
+/*bagian table */
+
+header ul {
+  float: left;
+}
+header ul li {
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+}
+header ul li a{
+  transition: .3s;
+}
+header ul li a:hover{
+  text-decoration: none;
+  color: rgb(255, 51, 0);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.container::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.mobile-menu {
+  float: left;
+  display: none;
+  padding: 16px;
+} 
+/*bagian ini untuk responsive terhadap tampilan laptop maupun handphone */
+@media screen and (max-width: 768px){
+  .mobile-menu{
+    display: block;
+  }
+  header ul{
+    display: none;
+  }.contact-3{
+    width: 100%;
+  }.loader{
+    width: 100%;
+  }
+  .settings-hobby {
+    width: 100%;
+  }
+}
+.mobile-menu:hover{
+  cursor: pointer;
+}
+#check { /*untuk menghilangkan check box*/
+  display: none;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -300px;
+  width: 250px;
+  background-color: rgba(255, 60, 0, 0.9);
+  transition: .3s;
+  z-index: 9999;
+}
+.sidebar ul li a{
+  color: white;
+}
+#check:checked ~ .sidebar {
+  right: 0;
+}
+.sidebar ul li{
+  padding: 24px;
+  transition-property: background-color;
+  transition: .3s;
+}
+.sidebar ul li:hover{
+  background-color:red ;
+}
+.banner img {
+  width: 200px;
+  border-style:groove;
+  border-radius: 100px;
+  box-shadow: 0 4px 10px 4px  black, 0 7px 20px 7px black;
+  margin-bottom: 10px;
+}
+.banner a:hover img{
+  transform: scale(1.1);
+}
+.banner h2{
+  font-size: 50px;
+  color: orangered;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.banner h2:hover{
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 15px #ff5506;
+}
+.banner p{
+  font-size: 20px;
+  color:rgb(0, 0, 0);
+  text-shadow: red -1px 0, cyan 1px 0;;
+}
+h2::selection{
+  color: white;
+  background-color: rgb(145, 2, 2);
+  
+}
+section {
+  padding: 50px ;
+}
+.banner{
+  background: url(Images/Blurry-Photo.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size: cover;
+  padding: 160px 0;
+}
+.banner-left{
+  padding-left: 24px;
+}
+section h3{
+  padding-bottom: 20px;
+  text-align:  center;
+  margin: 20px;
+  position: relative;
+}
+section h3::before{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 120px;
+  height: 1px;
+  background-color: rgb(212, 209, 209);
+  left: calc(50% - 60px);
+}
+section h3::after{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 4px;
+  background-color: red;
+  left: calc(50% - 20px);
+}
+#About p{
+  text-align: justify;
+  text-indent: 30px;
+  line-height: 25px;
+}
+#Favorite {
+  background-color: white
+}
+.image-all{
+  text-align: center;
+}
+.image-settings img {
+  width: 100%;
+  height: auto;
+  margin: 2% 3% 8% 4%;
+  box-shadow: 0 4px 10px 5px black, 0px 4px 10px 0 black;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.image-settings a:hover img{
+  transform: scale(1.1);
+}
+.constract img{
+  margin-left: 2%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#Skills {
+  background: url(Images/1.jpg);
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#Skills .bar{
+  height: 20px;
+  background-color:#fff;
+  margin: 5px 0 20px  0;
+  border-radius: 50px;
+  font-size: 12px;
+}
+.bar .value{
+  height: 20px;
+  width: 15%;
+  background-color: chocolate;
+  display: inline-block;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+}
+.bar .value-css{
+  height: 20px;
+  width: 10%;
+  background-color: chocolate;
+  display: inline-block;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+}.bar .value-c{
+  height: 20px;
+  width: 30%;
+  background-color: chocolate;
+  display: inline-block;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+}.bar .value-premiere{
+  height: 20px;
+  width: 90%;
+  background-color: chocolate;
+  display: inline-block;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+}.bar .value-effect{
+  height: 20px;
+  width: 60%;
+  background-color: chocolate;
+  display: inline-block;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+}.bar .value-ilust{
+  height: 20px;
+  width: 80%;
+  background-color: chocolate;
+  display: inline-block;
+  border-radius: 50px;
+  color: #fff;
+  text-align: center;
+}
+#hobby {
+  background-color: rgb(226, 226, 226);
+  padding-bottom: 200px;
+}
+#hobby p{
+  width: 100%;
+  font-size: 20px;
+  text-align:  center;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*social icon settings up*/
+.social-icons{
+  display:flex;
+  justify-content: center;
+  list-style: none;
+  height: fit-content;
+  padding:50px 0 120px;
+}
+.social-icons li{
+  margin: 20px 20px;
+}
+.social-icons li a{
+  font-size: 60px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: 0.5s ease;
+  text-shadow: 0 0 30px;
+}
+.social-icons li a::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(0.8px) saturate(100%);
+  -webkit-backdrop-filter: blur(6px) saturate(100%);
+  background-color: rgb(17, 25, 40, 0);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.social-icons li a:hover{
+  text-shadow: 0 0 0px;
+}
+#quotes {
+  background: url(Images/road.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#music {
+  background: url(Images/blurry-image-of-traffic.jpg);
+  background-repeat:no-repeat;
+  background-size: cover;
+  padding-bottom: 200px;
+}
+#quotes {
+  background-color: rgb(230, 224, 224);
+}
+footer{
+  background-color: rgb(94, 99, 99);
+  padding: 10px ;
+  text-align: center;
+}
+footer small{
+  color: white;
+}
+.loader{
+  font-size: 30px;
+  text-align: center;
+}
